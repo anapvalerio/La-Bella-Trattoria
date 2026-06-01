@@ -1,0 +1,415 @@
+/* CSS */
+@import url('https://fonts.googleapis.com/css2?family=Bentham&family=Mea+Culpa&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --cor-principal: #680202;
+    --cor-secundaria: #063c14;
+    --cor-terciaria: #F2D4AE;
+    --cor-texto: #f8ebbc;
+    --cor-texto-black: #121212;
+    --cor-fundo: #3a0404;
+    --fonte-titulo: "Mea Culpa", cursive;
+    --fonte-destaque: "Bentham", serif;
+    --fonte-texto: "Roboto", serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {}
+
+h1 {
+    font-family: var(--fonte-titulo);
+    font-weight: 400;
+    color: var(--cor-texto);
+}
+
+h2 {
+    font-family: var(--fonte-titulo);
+    font-weight: 400;
+    color: var(--cor-texto)
+}
+
+h3 {
+    color: var(--cor-texto);
+}
+
+p {
+    color: var(--cor-texto);
+}
+
+
+/* == Header cabeçalho == */
+.cabecalho {
+    background-color: var(--cor-principal);
+    padding: 15px 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+}
+
+
+
+.logo {}
+
+.logo a {
+    color: antiquewhite;
+    font-size: 1.5rem;
+    font-family: var(--fonte-destaque);
+}
+
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: var(--fonte-texto);
+}
+
+
+
+.menu a {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: var(--cor-texto)
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+/* == SEÇÕES == */
+
+/* *** DESTAQUE *** */
+#destaque {
+    min-height: 100vh;
+    padding: 20px 5%;
+    background-color: var(--cor-fundo);
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#destaque .card-destaque {
+    width: 40%;
+    height: 400px;
+    font-size: 1.5em;
+    background-color: #5e0101;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+#destaque .card-destaque p {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+#destaque .card-destaque-logo {
+    width: 40%;
+    height: 300px;
+    font-size: 1.5em;
+    border-radius: 10px;
+    padding: 20px 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#destaque .card-destaque-logo img {
+    object-fit: contain;
+    width: 700px;
+    border-radius: 20px;
+
+}
+
+/* *** SOBRE *** */
+#atendimento {
+    min-height: 100vh;
+    padding: 20px 5%;
+    background-color: var(--cor-secundaria);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#atendimento .card-atendimento {
+    width: 45%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#atendimento .card-atendimento img {
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 10px 30px 100px #02200a;
+}
+
+#atendimento .card-atendimento-informações {
+    width: 30%;
+    height: 400px;
+    font-size: 1.5em;
+    background-color: #5e0101;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 10px 30px 100px #02200a;
+}
+
+#atendimento .card-atendimento-informações p {
+    font-size: 20px;
+}
+
+
+
+
+/* *** CARDÁPIO *** */
+#cardapio {
+    min-height: 100vh;
+    padding: 130px 5% 20px 5%;
+    background-color: var(--cor-fundo);
+}
+
+#cardapio .card-container {
+    display: flex;
+    /* alinhar */
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    /* pra quebrar */
+    gap: 20px;
+    /* espaçamento */
+}
+
+#cardapio h1 {
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+#cardapio h2 {
+    font-size: 40px;
+}
+
+.card-container .card {
+    width: 250px;
+    height: 370px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: var(--cor-terciaria);
+    padding: 5px;
+}
+
+.card img {
+    object-fit: cover;
+}
+
+.card figure img {
+    width: 238px;
+    height: 238px;
+    border-radius: 5px;
+    background-color: azure;
+}
+
+.card h3 {
+    color: var(--cor-texto-black);
+}
+
+.card h4 {
+    color: var(--cor-texto-black)
+}
+
+.card p {
+    color: var(--cor-texto-black)
+}
+.card {
+transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 80px rgba(168, 95, 95, 0.732);
+    
+}
+
+/* *** PROMOÇÕES *** */
+#promocoes {
+    min-height: 100vh;
+    padding: 20px 5%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./assets/comida\ ao\ ar\ livre.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#promocoes background-color {
+    opacity: 40%;
+}
+
+
+#promocoes .card {
+    width: 24%;
+    height: 300px;
+    background-color: #5e0101;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#promocoes .titulo {
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#promocoes h1 {
+    font-size: 40px;
+    display: flex;
+}
+
+#promocoes p {
+    color: var(--cor-texto);
+    font-size: 20px;
+}
+
+#promocoes ul {
+    color: var(--cor-texto);
+    font-size: 20px;
+}
+
+
+/* *** CONTATO *** */
+#contato {
+    min-height: 100vh;
+    padding: 100px 5% 20px 5%; /* top - right - bottom - left */
+    background-color:var(--cor-fundo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+#contato .coluna-contato {
+    width: 40%;
+    height: 500px; /* ajustável */
+    background-color: var(--cor-principal);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+#contato .coluna-contato h2 {
+    font-size: 40px;
+}
+
+.coluna-contato .midias {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.midias h2 {
+    font-size: 45px;
+}
+
+
+.midias figure {
+    align-items: center;
+    padding-top: 10px;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.coluna-contato .endereco {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.endereco h3 {
+    font-size: 20px;
+}
+
+.endereco iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+
+}
+
+.coluna-contato form {
+    width: 90%;
+    height: 90%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+
+}
+
+.coluna-contato form input {
+    border-radius: 10px;
+    background-color: aliceblue;
+    padding: 5px;
+    border: none;
+    padding-left: 10px;
+    resize: none; /* bloqueia a regulagem */
+}
+
+.coluna-contato form button {
+    width: 150px;
+    height: 40px;
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+.coluna-contato form label {
+    color: var(--cor-texto);
+}
